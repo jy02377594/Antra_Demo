@@ -12,13 +12,13 @@ namespace Exercise4
             int n2 = Convert.ToInt32(Console.ReadLine());
             for (int i = n1; i <= n2; i++)
             {
-                int num = i, armstrongNum = 0;
+                int armstrongNum = 0, num = i;
                 while (num > 0)
                 {
                     armstrongNum += Convert.ToInt32(Math.Pow((num % 10), 3));
-                    num /= 10;
+                    num = num / 10;
                 }
-                if (armstrongNum == i) Console.WriteLine($"armstrongNum is {armstrongNum}");
+                if (armstrongNum == i) Console.WriteLine($"The armstrongNum is {armstrongNum}");
             }
         }
     }
